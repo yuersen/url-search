@@ -173,9 +173,9 @@ export default class URLSearch {
   /**
    * Returns an iterator allowing to go through all key/value pairs contained in this object.
    *
-   * @returns {Object}
+   * @returns {*[]}
    */
-  entries(): any {
+  entries(): any[] {
     const iterator: any = [];
     this.forEach((value, name) => {
       iterator.push([name, value]);
