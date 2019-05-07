@@ -1,0 +1,9 @@
+--require ts-node/register
+--require tsconfig-paths/register
+--require source-map-support/register
+--recursive
+--full-trace
+--bail
+--reporter mochawesome
+--reporter-options reportDir=./test/report,reportFilename=url-search,reportPageTitle=url-search
+test/specs/**/*.spec.ts

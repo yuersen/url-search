@@ -1,0 +1,59 @@
+{
+  "name": "url-search",
+  "version": "1.0.0",
+  "description": "Simple polyfill for URLSearchParams standard, Defines utility methods to work with the query string of a URL.",
+  "main": "./dist/url-search.js",
+  "es": "./dist/url-search.es.js",
+  "umd": "./dist/url-search.umd.js",
+  "files": [
+    "src/**/*",
+    "dist/**/*"
+  ],
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development npm run lint:fix && npm run clean && rollup --config",
+    "build": "cross-env NODE_ENV=production npm run lint:fix && npm run clean && rollup --config",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint --fix src/**/*.ts",
+    "clean": "rimraf ./dist && mkdir dist",
+    "doc": "esdoc -c esdoc.json",
+    "test": "mocha --opts ./test/mocha.opts",
+    "test:coverage": "nyc mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panxiangyang/url-search.git"
+  },
+  "keywords": [
+    "URLSearchParams",
+    "Polyfill"
+  ],
+  "author": "panxiangyang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/panxiangyang/url-search/issues"
+  },
+  "homepage": "https://github.com/panxiangyang/url-search#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/jsdom": "^12.2.3",
+    "@types/mocha": "^5.2.6",
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/parser": "^1.7.0",
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.16.0",
+    "jsdom": "^15.0.0",
+    "mocha": "^6.1.4",
+    "mochawesome": "^3.1.2",
+    "nyc": "^14.0.0",
+    "prettier": "^1.17.0",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.10.1",
+    "rollup-plugin-typescript2": "^0.21.0",
+    "source-map-support": "^0.5.12",
+    "ts-node": "^8.1.0",
+    "tsconfig-paths": "^3.8.0",
+    "typescript": "^3.4.5",
+    "uglify-es": "^3.3.9"
+  }
+}

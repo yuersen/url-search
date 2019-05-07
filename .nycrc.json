@@ -1,0 +1,11 @@
+{
+  "include": ["src/url-search.ts"],
+  "exclude": ["**/*.d.ts"],
+  "extension": [".ts", ".tsx"],
+  "require": ["ts-node/register"],
+  "reporter": ["text", "html"],
+  "sourceMap": true,
+  "instrument": true,
+  "all": true,
+  "report-dir": "./test/coverage"
+}
